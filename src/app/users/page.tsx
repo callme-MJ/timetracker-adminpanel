@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://cdd468997899.ngrok-free.app";
 
 async function api(path: string, options?: RequestInit) {
   const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;

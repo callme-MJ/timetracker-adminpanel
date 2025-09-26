@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./Login.css";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://229c09b5763a.ngrok-free.app";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://cdd468997899.ngrok-free.app";
 
 export default function Login() {
   const [email, setEmail] = useState("");

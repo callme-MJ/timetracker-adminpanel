@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import "./Home.css"; // import external CSS
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://229c09b5763a.ngrok-free.app";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://cdd468997899.ngrok-free.app";
 
 async function api(path: string, options?: RequestInit) {
   const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -35,7 +35,11 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
 
   async function loadUsers() {
+    console.log("hereee");
+    
     const list = await api("/users");
+    console.log(list);
+    
     setUsers(list || []);
     setLoading(false);
   }
@@ -54,6 +58,8 @@ export default function Home() {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+    console.log(token);
+    
     if (!token) {
       window.location.href = "/login";
       return;
