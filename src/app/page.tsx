@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import "./Home.css"; // import external CSS
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://229c09b5763a.ngrok-free.app";
 
 async function api(path: string, options?: RequestInit) {
   const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
